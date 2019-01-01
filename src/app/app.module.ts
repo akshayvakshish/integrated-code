@@ -59,7 +59,6 @@ const appRoutes: Routes = [
     FooterComponent,
     BodyComponent,
     LoaderComponent,
-    
     HeaderImageComponent,
     FeaturedCoursesComponent,
     SearchBarComponent,
@@ -76,19 +75,19 @@ const appRoutes: Routes = [
     CarouselComponent,
     IntroductionComponent,
     TestimonialComponent,
-    
     BarGraphsComponent,
     GraphsComponent,
     PieChartsComponent,
-    TestimonyComponent,
-    
+    TestimonyComponent
 
   ],
   imports: [
-    ChartsModule,BrowserModule, NgbModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes), AngularFontAwesomeModule, HttpClientModule
+    BrowserModule.withServerTransition({appId: 'my-app'}),
+    ChartsModule, NgbModule, FormsModule, ReactiveFormsModule,
+     RouterModule.forRoot(appRoutes), AngularFontAwesomeModule, HttpClientModule
   ],
   providers: [ServiceInterceptor,
-    {provide: HTTP_INTERCEPTORS, useClass: ServiceInterceptor, multi:true}
+    {provide: HTTP_INTERCEPTORS, useClass: ServiceInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
