@@ -1,0 +1,103 @@
+.header-image {
+  background: url('/src/assets/header-image2.jpg');
+  width: 100%;
+  height: 400px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: relative;
+  /* -webkit-filter: contrast(120%); */
+  /* filter: contrast(120%); */
+  position: relative;
+  z-index: 0;
+}
+.cardf{
+  /* box-shadow:0 4px 8px 0 rgba(0,0,0,0.6); */
+  transition: 0.4s;
+  width: 100%;
+  /* background: #fff; */
+  text-align:center;
+  font-size: 16px;
+  font-family:sans-serif;
+  float: left;
+  margin:10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .head-image-tile {
+    height: 200px;
+    top: 20%;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    /* left: 15%; */
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-transform: none;
+    text-shadow: none;
+    font-size: 2.5em;
+    font-weight: 600;
+    position: relative;
+    color: #414141;
+  }
+}
+
+.head-image-tile {
+  height: 200px;
+  top: 20%;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  /* left: 15%; */
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  text-transform: none;
+  text-shadow: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  position: relative;
+  color: #ffffff;
+}
+
+/* @media screen and (max-width:600px){
+   .header-image  {
+    background: url('/src/assets/wom.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: contrast(120%);
+    filter: contrast(120%);
+    position: relative;
+    z-index: 0;
+  } 
+  
+  body .header-image:hover {
+    -webkit-filter: contrast(115%);
+    filter: contrast(115%);
+  }
+  
+  body .head-image-tile {
+    height: 200px;
+    top: 20%;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    left: 15%;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-transform: none;
+    text-shadow: none;
+    font-size: 2.5em;
+    font-weight: 600;
+    position: relative;
+    color: #414141;
+  }
+} */
+
+.card{
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.6);
+  transition: 0.4s;
+  width: 20%;
+  height:300px;
+  background: #fff;
+  text-align:center;
+  font-size: 16px;
+  font-family:sans-serif;
+  float: left;
+  margin:10px;
+}

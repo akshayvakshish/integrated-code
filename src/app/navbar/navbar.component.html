@@ -1,0 +1,99 @@
+<!-- <div class="container-fluid">
+  <div class="row nav-custom">
+    <div class="container">
+      <div class="col-xs-8 col-sm-8 col-md-8">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 logo-text" routerLink="/">
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 nav-left-links list">
+            <div *ngFor='let link of navLinks' class="list-link" id='list-link'>
+              <a class="test">{{link.link}}
+                <i *ngIf="link.link.toLowerCase() == 'courses' || link.link.toLowerCase() == 'companies'" class="caret-down">*</i>
+              </a>
+              <div class="drop-menu">
+                <app-nav-dropdown class="drop-item" [dropDownMenu]="link.menu" menuHeader="{{link.link}}"></app-nav-dropdown>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4">
+    </div>
+  </div>
+</div> -->
+<nav class="navbar navbar-expand-md nav-custom">
+  <img routerLink="/" class="navbar-brand" style="width:200px" src='/src/assets/logo.PNG' />
+  <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" (click)="collapse=!collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse nav-left-links list " (click)="collapse=true" [hidden]="collapse" id="collapsibleNavbar">
+    <ul *ngFor='let link of navLinks' class="navbar-nav list-link" id='list-link'>
+      <li class="nav-item test" routerLink='{{link.link.toLowerCase()}}'>{{link.link}}
+        <i *ngIf="link.link.toLowerCase() == 'courses'" class="dropdown-toggle"></i>
+      </li>
+      <div *ngIf='link.menu.length > 0' class="drop-menu">
+        <app-nav-dropdown class="drop-item" [dropDownMenu]="link.menu" menuHeader="{{link.link}}"></app-nav-dropdown>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<br> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

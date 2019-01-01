@@ -1,0 +1,13 @@
+<div class="container">
+        <div class="row">
+                <div class="col-md-3" *ngFor="let card of bootCourse">
+                    <app-course-card class="panals" [cardData]="card"></app-course-card>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let card of skillCourse">
+            <app-course-card class="panals" [cardData]="card"></app-course-card>
+        </div>
+    </div>
+    
+</div>
